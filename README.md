@@ -1,2 +1,2 @@
 # Algoritmos
-Algoritmos de Ordenação
+Repositório para Algoritmos de Ordenação
