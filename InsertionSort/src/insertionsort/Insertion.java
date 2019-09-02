@@ -7,7 +7,7 @@ package insertionsort;
  */
 public class Insertion {
     
-    public void insertionsortAlgoritmo(int []vetor, int nelem){
+    public void insertionSortAlgoritmo(int []vetor, int nelem){
         int j = 0, chave = 0;
         
         /*

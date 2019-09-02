@@ -1,5 +1,4 @@
-
-package insertionsort;
+package selectionsort;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,13 +8,11 @@ import java.io.IOException;
  *
  * @author luyza
  */
-public class InsertionSort {
+public class SelectionSort {
 
     public static void main(String[] args) {
-        
-        
-        try{
-            FileReader arquivo = new FileReader("C:\\Users\\luyza\\Desktop\\Algoritmos\\InsertionSort\\src\\instancias-num\\num.100000.1.txt");
+         try{
+            FileReader arquivo = new FileReader("C:\\Users\\luyza\\Desktop\\Algoritmos\\SelectionSort\\test\\num.100000.1.txt");
             BufferedReader le_arquivo = new BufferedReader(arquivo); 
             
             
@@ -32,14 +29,17 @@ public class InsertionSort {
             }
             
             le_arquivo.close();
+             System.out.println("tamho do vetor ."+tamanho);
             
-            Insertion insertionsort = new Insertion() ;
-            insertionsort.insertionSortAlgoritmo(vetor, tamanho);
+            Selection selectionsort = new Selection();
+            selectionsort.selectionSortAlgortimo(vetor, tamanho);
+            
                         
         }
         catch(IOException e){
             e.printStackTrace();
         }
+        
     }
     
 }
