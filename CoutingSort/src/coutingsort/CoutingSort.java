@@ -1,5 +1,9 @@
 package coutingsort;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
 /**
  *
  * @author luyza
@@ -11,23 +15,43 @@ public class CoutingSort {
      */
     public static void main(String[] args) {
          
-    int vetor [] = {56,12,1002,302,2303,3203,1,9,7,4,3,6,5,0,9,83,61,152,56488,3897,2746,6,3687,726,4988,2942};
-    int tamanho = 0; 
-    tamanho =  vetor.length;
-    int maior = 0;
     
-    for(int i =0; i<tamanho; i++){
-        if(vetor[i]>maior){
-            maior = vetor[i];
-        }
+   
+    try{
+        FileReader arquivo = new FileReader("C:\\Users\\luyza\\Desktop\\Algoritmos\\CoutingSort\\src\\instancias-num\\num.100000.1.txt");
+        BufferedReader le_arquivo = new BufferedReader(arquivo);
+        
+        
+        int tamanho = 0; 
+        tamanho = Integer.parseInt(le_arquivo.readLine());
+        String linha;
+        int [] vetor = new int[tamanho];
+        int i = 0,maior = 0, menor = 0;
+            
+            while((linha = le_arquivo.readLine())!=null){
+                
+                vetor[i] = Integer.parseInt(linha);
+                i++;
+            }
+            
+        le_arquivo.close();
+        
+        
+        
+        Count coutingsort = new Count();
+        coutingsort.coutingSortAlgoritmo(vetor,tamanho);
+    }
+    catch(IOException e){
+        e.printStackTrace();
     }
     
-    Count coutingsort = new Count();
-    coutingsort.CouingSort(vetor,tamanho,maior);
+    }
+    
+ 
     
              	
        
-    }
-    
-    
 }
+    
+    
+

@@ -29,7 +29,7 @@ public class SelectionSort {
             }
             
             le_arquivo.close();
-             System.out.println("tamho do vetor ."+tamanho);
+             //System.out.println("tamanho do vetor ."+tamanho);
             
             Selection selectionsort = new Selection();
             selectionsort.selectionSortAlgortimo(vetor, tamanho);
